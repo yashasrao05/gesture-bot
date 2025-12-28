@@ -1,3 +1,4 @@
 *.docx
 *.pdf
 venv310/
+scripts/__pycache__/

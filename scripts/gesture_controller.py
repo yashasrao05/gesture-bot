@@ -1,11 +1,5 @@
 """
-Step 4: Gesture to Motor Command Mapping
-File: gesture_controller.py
 
-Maps gesture recognition output to robot motion commands.
-- Gesture + confidence -> motor speeds (left, right)
-- Handles confidence thresholding
-- Outputs JSON format for robot control
 
 This module produces the SAME command format as the joystick:
 {
@@ -56,10 +50,7 @@ class GestureController:
         self.confidence_threshold = 0.6
         
         # Gesture to motor mapping
-        # Format: gesture -> (left_speed, right_speed)
-        # Speed range: -255 to 255
-        #   Positive = forward
-        #   Negative = backward
+
         self.gesture_to_motor = {
             'UP': (255, 255),        # Forward: both full forward
             'DOWN': (-255, -255),    # Backward: both full backward
