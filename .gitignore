@@ -2,3 +2,4 @@
 *.pdf
 venv310/
 scripts/__pycache__/
+*.png

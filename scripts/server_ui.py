@@ -1,3 +1,7 @@
+import warnings
+import google.protobuf
+warnings.filterwarnings("ignore", category=UserWarning, module="google.protobuf")
+
 import asyncio
 import websockets
 import json
@@ -12,7 +16,6 @@ import tensorflow as tf
 import mediapipe as mp
 
 from gesture_controller import GestureController
-
 
 class GestureInferenceServer:
     def __init__(
